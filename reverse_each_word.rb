@@ -1,7 +1,12 @@
 def reverse_each_word(sentence)
   words = sentence.split
+  words_reversed = []
   words.each do |word|
-    word.reverse!
+    reversed = word.reverse!
+    words_reversed.push(reversed)
   end
-  sentence
+  reversed_sentence = words_reversed.join(" ")
+  reversed_sentence
 end
+
+reverse_each_word("I love you")
